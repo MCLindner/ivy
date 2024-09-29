@@ -15,6 +15,14 @@ run/main_scene="res://World.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
+[display]
+
+window/size/viewport_width=320
+window/size/viewport_height=240
+window/size/window_width_override=2560
+window/size/window_height_override=1600
+window/stretch/mode="viewport"
+
 [dotnet]
 
 project/assembly_name="GameGame"

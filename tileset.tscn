@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://dbqd5ou8k3fib"]
+
+[ext_resource type="PackedScene" uid="uid://du7n2skmuojlm" path="res://dungeon.glb" id="1_m06l3"]
+
+[node name="dungeon" instance=ExtResource("1_m06l3")]
