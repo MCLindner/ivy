@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://b1uros5hpvfqc"]
+[gd_scene load_steps=6 format=3 uid="uid://b1uros5hpvfqc"]
 
 [ext_resource type="PackedScene" uid="uid://co7aflfpnjkim" path="res://Player.tscn" id="1_fe2f2"]
-[ext_resource type="MeshLibrary" uid="uid://c6m3xhpxty7wf" path="res://tileset.tres" id="2_fdrqe"]
+[ext_resource type="MeshLibrary" uid="uid://c6m3xhpxty7wf" path="res://tileset/tileset.tres" id="2_fdrqe"]
 [ext_resource type="PackedScene" uid="uid://di71uxgh6qnsm" path="res://Item.tscn" id="3_xthd6"]
+[ext_resource type="PackedScene" uid="uid://cdc3mtqsfd2px" path="res://UI.tscn" id="4_ec87q"]
 
 [sub_resource type="Environment" id="Environment_f3h33"]
 background_mode = 2
@@ -16,6 +17,7 @@ volumetric_fog_albedo = Color(0.510075, 0.510075, 0.510075, 1)
 [node name="World" type="Node3D"]
 
 [node name="Player" parent="." instance=ExtResource("1_fe2f2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_f3h33")
@@ -31,3 +33,5 @@ metadata/_editor_floor_ = Vector3(0, 0, 0)
 
 [node name="Item" parent="." instance=ExtResource("3_xthd6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.708644, 1.80823, -3.58803)
+
+[node name="UI" parent="." instance=ExtResource("4_ec87q")]

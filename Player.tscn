@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://co7aflfpnjkim"]
+[gd_scene load_steps=5 format=3 uid="uid://co7aflfpnjkim"]
 
 [ext_resource type="Script" path="res://addons/ultimate_character/ucharacterbody3d.gd" id="1_x2xhu"]
+[ext_resource type="PackedScene" uid="uid://dbx72h4h5onjy" path="res://interact/InteractRay.tscn" id="2_2gdsh"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_g1mgc"]
 
@@ -43,6 +44,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.054178, 2.37815)
 light_color = Color(0.742323, 1, 0.718313, 1)
 spot_range = 8.98805
 spot_angle = 25.3326
+
+[node name="InteractRay" parent="UCharacterBody3D/Head" instance=ExtResource("2_2gdsh")]
 
 [node name="RayCast3D" type="RayCast3D" parent="UCharacterBody3D"]
 target_position = Vector3(0, 2, 0)
