@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://co7aflfpnjkim" path="res://Player.tscn" id="1_fe2f2"]
 [ext_resource type="MeshLibrary" uid="uid://c6m3xhpxty7wf" path="res://tileset/tileset.tres" id="2_fdrqe"]
 [ext_resource type="PackedScene" uid="uid://di71uxgh6qnsm" path="res://Item.tscn" id="3_xthd6"]
-[ext_resource type="PackedScene" uid="uid://cdc3mtqsfd2px" path="res://UI.tscn" id="4_ec87q"]
+[ext_resource type="PackedScene" path="res://UI.tscn" id="4_ec87q"]
 
 [sub_resource type="Environment" id="Environment_f3h33"]
 background_mode = 2
