@@ -7,5 +7,9 @@ func _physics_process(_delta):
 	
 	if is_colliding():
 		var collider = get_collider()
-		prompt.text = "Collided with " + collider.name
-	
+		
+		if collider is Interactable:
+			prompt.text = collider.get_prompt()
+		
+		if Input.is_action_just_pressed("interact"):
+			collider.interact(owner)
