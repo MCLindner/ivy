@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://c4ukakb451dl5"]
+
+[ext_resource type="Script" path="res://interact/inventory_item.gd" id="1_da704"]
+
+[node name="InventoryItem" type="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.95524, -4.35142)
+script = ExtResource("1_da704")
+
+[connection signal="interacted" from="." to="." method="_on_interacted"]

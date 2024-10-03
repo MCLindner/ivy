@@ -9,8 +9,6 @@ signal interacted(body)
 
 func interact(body):
 	interacted.emit(body)
-	#print(body.name, " interacted with ", name)
-
 
 func get_prompt():
 	var key_name = ""

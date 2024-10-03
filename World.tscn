@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://co7aflfpnjkim" path="res://Player.tscn" id="1_fe2f2"]
 [ext_resource type="MeshLibrary" uid="uid://c6m3xhpxty7wf" path="res://tileset/tileset.tres" id="2_fdrqe"]
-[ext_resource type="Script" path="res://item.gd" id="4_aunr2"]
+[ext_resource type="PackedScene" uid="uid://c4ukakb451dl5" path="res://interact/InventoryItem.tscn" id="4_0q76k"]
 [ext_resource type="PackedScene" uid="uid://2trebf70n5jl" path="res://UI.tscn" id="4_ec87q"]
 
 [sub_resource type="Environment" id="Environment_f3h33"]
@@ -14,9 +14,9 @@ volumetric_fog_enabled = true
 volumetric_fog_density = 0.5
 volumetric_fog_albedo = Color(0.510075, 0.510075, 0.510075, 1)
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_nji01"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_xsblw"]
 
-[sub_resource type="SphereMesh" id="SphereMesh_gbtlw"]
+[sub_resource type="SphereMesh" id="SphereMesh_lktrm"]
 
 [node name="World" type="Node3D"]
 
@@ -37,14 +37,12 @@ metadata/_editor_floor_ = Vector3(0, 0, 0)
 
 [node name="UI" parent="." instance=ExtResource("4_ec87q")]
 
-[node name="Item" type="RigidBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.95524, -4.35142)
-script = ExtResource("4_aunr2")
+[node name="Sword" parent="." instance=ExtResource("4_0q76k")]
+item_id = "sword"
+prompt_message = "Touch Sword"
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Item"]
-shape = SubResource("SphereShape3D_nji01")
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Sword"]
+shape = SubResource("SphereShape3D_xsblw")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Item"]
-mesh = SubResource("SphereMesh_gbtlw")
-
-[connection signal="interacted" from="Item" to="Item" method="_on_interacted"]
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Sword"]
+mesh = SubResource("SphereMesh_lktrm")
