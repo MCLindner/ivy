@@ -1,12 +1,5 @@
-extends Node3D
-class_name Character
+extends Label
 
-
-var inventory_array = []
-
-func pickup(item_id):
-	inventory_array.append(str(item_id))
-	print(item_id)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -15,4 +8,6 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	set_text(str(Engine.get_frames_per_second()))
+	
 	pass

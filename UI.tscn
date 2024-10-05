@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://2trebf70n5jl"]
+[gd_scene load_steps=3 format=3 uid="uid://2trebf70n5jl"]
 
 [ext_resource type="Texture2D" uid="uid://b2056knj8cjkm" path="res://images/crosshair.png" id="1_8dhbj"]
+[ext_resource type="Script" path="res://fps.gd" id="2_53b7n"]
 
 [node name="UI" type="Control"]
 layout_mode = 3
@@ -24,3 +25,9 @@ offset_bottom = 7.5
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_8dhbj")
+
+[node name="FPS" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+script = ExtResource("2_53b7n")
