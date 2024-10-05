@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://co7aflfpnjkim"]
+[gd_scene load_steps=6 format=3 uid="uid://co7aflfpnjkim"]
 
+[ext_resource type="Script" path="res://character.gd" id="1_bkhrr"]
 [ext_resource type="Script" path="res://addons/ultimate_character/ucharacterbody3d.gd" id="1_x2xhu"]
 [ext_resource type="PackedScene" uid="uid://dbx72h4h5onjy" path="res://interact/InteractRay.tscn" id="2_2gdsh"]
 
@@ -9,6 +10,7 @@
 height = 1.3
 
 [node name="Player" type="Node3D"]
+script = ExtResource("1_bkhrr")
 
 [node name="UCharacterBody3D" type="CharacterBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
