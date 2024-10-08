@@ -3,6 +3,8 @@ class_name Character
 
 
 var inventory_array = []
+var health: int = 100
+var stamina: int = 100
 
 func pickup(item_id):
 	inventory_array.append(str(item_id))
