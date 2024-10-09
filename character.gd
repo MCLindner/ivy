@@ -8,7 +8,7 @@ var stamina: int = 100
 
 func pickup(item_id):
 	inventory_array.append(str(item_id))
-	print(item_id)
+	print(inventory_array)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

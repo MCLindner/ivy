@@ -17,3 +17,8 @@ shape = SubResource("CapsuleShape3D_rea5f")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D"]
 mesh = SubResource("CapsuleMesh_bcbg8")
 skeleton = NodePath("../..")
+
+[node name="Head" type="Node3D" parent="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.796896, 0)
+
+[node name="Camera3D" type="Camera3D" parent="RigidBody3D/Head"]
