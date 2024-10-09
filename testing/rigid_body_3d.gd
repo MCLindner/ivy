@@ -1,6 +1,6 @@
 extends RigidBody3D
 
-var MOUSE_SENSITIVITY: float = .5
+@export var MOUSE_SENSITIVITY : float = 0.4
 
 @onready var head_node = get_node("Head")
 
