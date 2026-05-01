@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://2trebf70n5jl"]
 
 [ext_resource type="Texture2D" uid="uid://b2056knj8cjkm" path="res://images/crosshair.png" id="1_8dhbj"]
-[ext_resource type="Script" uid="uid://dkocvjl25y5g0" path="res://ui.gd" id="1_g6l6n"]
-[ext_resource type="Script" uid="uid://bu5s5v87v7ax0" path="res://fps.gd" id="2_53b7n"]
+[ext_resource type="Script" uid="uid://dkocvjl25y5g0" path="res://ui/ui.gd" id="1_g6l6n"]
+[ext_resource type="Script" uid="uid://bu5s5v87v7ax0" path="res://ui/fps.gd" id="2_53b7n"]
 
 [node name="UI" type="Control" unique_id=1203666893]
 layout_mode = 3

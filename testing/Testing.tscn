@@ -1,35 +1,17 @@
-[gd_scene load_steps=6 format=3 uid="uid://bjmbvqi1vgogw"]
+[gd_scene format=3 uid="uid://bjmbvqi1vgogw"]
 
-[ext_resource type="Script" path="res://testing/rigid_body_3d.gd" id="1_utm21"]
+[ext_resource type="Script" uid="uid://cdjl3jafe3k03" path="res://testing/rigid_body_3d.gd" id="1_utm21"]
 [ext_resource type="MeshLibrary" uid="uid://c6m3xhpxty7wf" path="res://tileset/tileset.tres" id="2_7ajm8"]
-[ext_resource type="PackedScene" uid="uid://2trebf70n5jl" path="res://UI.tscn" id="3_mhwwu"]
+[ext_resource type="PackedScene" uid="uid://2trebf70n5jl" path="res://ui/UI.tscn" id="3_mhwwu"]
+[ext_resource type="PackedScene" uid="uid://dbx72h4h5onjy" path="res://interact/InteractRay.tscn" id="4_qearh"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rea5f"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_bcbg8"]
 
-[node name="Node3D" type="Node3D"]
+[node name="Testing" type="Node3D" unique_id=2094579960]
 
-[node name="Testing" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.98209, 0)
-metadata/_edit_group_ = true
-
-[node name="RigidBody3D" type="RigidBody3D" parent="Testing"]
-script = ExtResource("1_utm21")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Testing/RigidBody3D"]
-shape = SubResource("CapsuleShape3D_rea5f")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Testing/RigidBody3D"]
-mesh = SubResource("CapsuleMesh_bcbg8")
-skeleton = NodePath("../..")
-
-[node name="Head" type="Node3D" parent="Testing/RigidBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8, 0)
-
-[node name="Camera3D" type="Camera3D" parent="Testing/RigidBody3D/Head"]
-
-[node name="GridMap" type="GridMap" parent="."]
+[node name="GridMap" type="GridMap" parent="." unique_id=1846733018]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
 mesh_library = ExtResource("2_7ajm8")
 cell_size = Vector3(1, 1, 1)
@@ -38,4 +20,22 @@ data = {
 }
 metadata/_editor_floor_ = Vector3(0, 0, 0)
 
-[node name="UI" parent="." instance=ExtResource("3_mhwwu")]
+[node name="UI" parent="." unique_id=1530906988 instance=ExtResource("3_mhwwu")]
+
+[node name="RigidBody3D" type="RigidBody3D" parent="." unique_id=1088152611]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.98209, 0)
+script = ExtResource("1_utm21")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D" unique_id=1747107324]
+shape = SubResource("CapsuleShape3D_rea5f")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D" unique_id=743761620]
+mesh = SubResource("CapsuleMesh_bcbg8")
+skeleton = NodePath("")
+
+[node name="Head" type="Node3D" parent="RigidBody3D" unique_id=1980261485]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8, 0)
+
+[node name="Camera3D" type="Camera3D" parent="RigidBody3D/Head" unique_id=604871685]
+
+[node name="InteractRay" parent="RigidBody3D/Head" unique_id=1386028111 instance=ExtResource("4_qearh")]
