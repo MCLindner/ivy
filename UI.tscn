@@ -1,17 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://2trebf70n5jl"]
+[gd_scene format=3 uid="uid://2trebf70n5jl"]
 
 [ext_resource type="Texture2D" uid="uid://b2056knj8cjkm" path="res://images/crosshair.png" id="1_8dhbj"]
-[ext_resource type="Script" path="res://fps.gd" id="2_53b7n"]
+[ext_resource type="Script" uid="uid://dkocvjl25y5g0" path="res://ui.gd" id="1_g6l6n"]
+[ext_resource type="Script" uid="uid://bu5s5v87v7ax0" path="res://fps.gd" id="2_53b7n"]
 
-[node name="UI" type="Control"]
+[node name="UI" type="Control" unique_id=1203666893]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_g6l6n")
 
-[node name="Crosshair" type="TextureRect" parent="."]
+[node name="Crosshair" type="TextureRect" parent="." unique_id=463025945]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -26,8 +28,16 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_8dhbj")
 
-[node name="FPS" type="Label" parent="."]
+[node name="FPS" type="Label" parent="." unique_id=920966285]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 script = ExtResource("2_53b7n")
+
+[node name="Inventory" type="RichTextLabel" parent="." unique_id=808784165]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 75.0
+offset_right = 178.0
+offset_bottom = 129.0
+text = "Inventory:"

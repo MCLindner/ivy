@@ -76,3 +76,5 @@ omni_range = 7.863
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="OmniLight3D" unique_id=1004245156]
 mesh = SubResource("BoxMesh_t35db")
+
+[connection signal="update_inventory" from="Player" to="UI" method="_on_player_update_inventory"]
