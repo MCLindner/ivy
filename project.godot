@@ -16,7 +16,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 
 config/name="Ivy"
 run/main_scene="res://World.tscn"
-config/features=PackedStringArray("4.6", "Forward Plus")
+config/features=PackedStringArray("4.6", "C#", "Forward Plus")
 config/icon="res://images/icon.svg"
 
 [autoload]
@@ -33,7 +33,7 @@ window/stretch/mode="viewport"
 
 [dotnet]
 
-project/assembly_name="GameGame"
+project/assembly_name="Ivy"
 
 [editor]
 

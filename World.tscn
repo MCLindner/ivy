@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://b1uros5hpvfqc"]
+[gd_scene format=3 uid="uid://b1uros5hpvfqc"]
 
 [ext_resource type="PackedScene" uid="uid://co7aflfpnjkim" path="res://Player.tscn" id="1_fe2f2"]
 [ext_resource type="MeshLibrary" uid="uid://c6m3xhpxty7wf" path="res://tileset/tileset.tres" id="2_fdrqe"]
@@ -24,15 +24,15 @@ volumetric_fog_albedo = Color(0.510075, 0.510075, 0.510075, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_t35db"]
 
-[node name="World" type="Node3D"]
+[node name="World" type="Node3D" unique_id=468207295]
 
-[node name="Player" parent="." instance=ExtResource("1_fe2f2")]
+[node name="Player" parent="." unique_id=565844574 instance=ExtResource("1_fe2f2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=650654270]
 environment = SubResource("Environment_f3h33")
 
-[node name="GridMap" type="GridMap" parent="."]
+[node name="GridMap" type="GridMap" parent="." unique_id=1205434213]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
 mesh_library = ExtResource("2_fdrqe")
 cell_size = Vector3(1, 1, 1)
@@ -41,32 +41,32 @@ data = {
 }
 metadata/_editor_floor_ = Vector3(0, 0, 0)
 
-[node name="UI" parent="." instance=ExtResource("4_ec87q")]
+[node name="UI" parent="." unique_id=765131348 instance=ExtResource("4_ec87q")]
 
-[node name="Sword" parent="." instance=ExtResource("4_0q76k")]
+[node name="Sword" parent="." unique_id=1907674552 instance=ExtResource("4_0q76k")]
 item_id = "sword"
 prompt_message = "Touch Sword"
 metadata/_edit_group_ = true
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="Sword"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Sword" unique_id=1364291099]
 shape = SubResource("SphereShape3D_xsblw")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="Sword"]
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Sword" unique_id=1445411907]
 mesh = SubResource("SphereMesh_lktrm")
 
-[node name="Potion" parent="." instance=ExtResource("4_0q76k")]
+[node name="Potion" parent="." unique_id=1850255748 instance=ExtResource("4_0q76k")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.95524, -2.70506)
 item_id = "potion"
 prompt_message = "Pick up Apple"
 metadata/_edit_group_ = true
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Potion"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Potion" unique_id=717481319]
 mesh = SubResource("CapsuleMesh_jqu16")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Potion"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Potion" unique_id=1530861466]
 shape = SubResource("CapsuleShape3D_08dxo")
 
-[node name="OmniLight3D" type="OmniLight3D" parent="."]
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1895826186]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.62549, 3.59962, 3.53671)
 light_color = Color(0.749288, 0.692853, 0.764598, 1)
 light_energy = 1.355
@@ -74,5 +74,5 @@ light_volumetric_fog_energy = 2.733
 shadow_enabled = true
 omni_range = 7.863
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="OmniLight3D"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="OmniLight3D" unique_id=1004245156]
 mesh = SubResource("BoxMesh_t35db")
